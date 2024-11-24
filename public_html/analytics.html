@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Adding Bootstrap for better layout and styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styling the bar charts */
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            margin-top: 10px;
+            position: relative;
+            height: 300px;
+        }
+
+        .bar {
+            width: 60px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Y-axis label styling */
+        .y-axis-label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-100%) translateY(-50%) rotate(-90deg); /* Rotate and center vertically */
+            transform-origin: center; /* Ensure rotation origin is centered */
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center; /* Align the text within the label */
+            line-height: 1.2; /* Improved spacing for proper wrapping */
+            white-space: pre-wrap; /* Properly breaks text into lines */
+        }
+
+        .x-axis {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .chart-container {
+            margin-bottom: 30px;
+        }
+
+        /* Reduce white space between sections */
+        .chart-section {
+            margin-bottom: 30px;
+        }
+
+        /* Notes styling */
+        .chart-note {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .chart-source {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333; /* Ensure consistent color for all sources */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analytics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beaches.html">Beaches and Water Activities</a></li>
+                <li><a href="cultural.html">Cultural Experiences</a></li>
+                <li><a href="family.html">Family-Friendly Adventures</a></li>
+                <li><a href="daytrips.html">Day Trips Around Tampa Bay</a></li>
+                <li><a href="romantic.html">Romantic Outings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Annual Visitor Numbers -->
+        <section class="chart-section">
+            <h2>Annual Visitor Numbers (2019-2023)</h2>
+            <div class="chart-container">
+                <div class="bar-chart">
+                    <div class="y-axis-label">Visitors<br>(Millions)</div>
+                    <div class="bar" style="height: 150px; background-color: #4CAF50;">9.1M</div>
+                    <div class="bar" style="height: 90px; background-color: #4CAF50;">5.8M</div>
+                    <div class="bar" style="height: 135px; background-color: #4CAF50;">8.5M</div>
+                    <div class="bar" style="height: 140px; background-color: #4CAF50;">9.2M</div>
+                    <div class="bar" style="height: 155px; background-color: #4CAF50;">10.1M</div>
+                </div>
+                <div class="x-axis" style="display: flex; justify-content: space-around;">
+                    <span>2019</span>
+                    <span>2020</span>
+                    <span>2021</span>
+                    <span>2022</span>
+                    <span>2023</span>
+                </div>
+            </div>
+            <p class="chart-note"><strong>Note:</strong> The number represents estimated visitors arriving by air in Tampa Bay from 2019 to 2023.</p>
+            <p class="chart-source"><strong>Source:</strong> <a href="https://www.visittampabay.com/media/research/" target="_blank">Visit Tampa Bay - Research & Statistics</a></p>
+        </section>
+
+        <!-- Hotel Occupancy Rates -->
+        <section class="chart-section">
+            <h2>Hotel Occupancy Rates in 2023</h2>
+            <div class="chart-container">
+                <div class="bar-chart">
+                    <div class="y-axis-label">Occupancy<br>(%)</div>
+                    <div class="bar" style="height: 120px; background-color: #FF9800;">40%</div>
+                    <div class="bar" style="height: 75px; background-color: #4CAF50;">25%</div>
+                    <div class="bar" style="height: 60px; background-color: #2196F3;">20%</div>
+                    <div class="bar" style="height: 45px; background-color: #FFC107;">15%</div>
+                </div>
+                <div class="x-axis" style="display: flex; justify-content: space-around;">
+                    <span>Beach Area</span>
+                    <span>Downtown</span>
+                    <span>Suburban</span>
+                    <span>Airport Area</span>
+                </div>
+            </div>
+            <p class="chart-note"><strong>Note:</strong> The percentage represents hotel occupancy rates for various areas of Tampa Bay in 2023.</p>
+            <p class="chart-source"><strong>Source:</strong> <a href="https://www.tampabayhotelassociation.com" target="_blank">Tampa Bay Hotel Association</a></p>
+        </section>
+
+        <!-- Economic Impact of Tourism -->
+        <section class="chart-section">
+            <h2>Economic Impact of Tourism in 2023</h2>
+            <div class="chart-container">
+                <div class="bar-chart">
+                    <div class="y-axis-label">Impact<br>($ Millions)</div>
+                    <div class="bar" style="height: 300px; background-color: #388E3C;">$500M</div>
+                    <div class="bar" style="height: 200px; background-color: #2196F3;">$300M</div>
+                    <div class="bar" style="height: 150px; background-color: #FF9800;">$200M</div>
+                </div>
+                <div class="x-axis" style="display: flex; justify-content: space-around;">
+                    <span>Tourism Spending</span>
+                    <span>Job Creation</span>
+                    <span>Local Business Impact</span>
+                </div>
+            </div>
+            <p class="chart-note"><strong>Note:</strong> The economic impact includes contributions to tourism spending, job creation, and local business impact.</p>
+            <p class="chart-source"><strong>Source:</strong> <a href="https://www.hillsboroughcounty.org/en/residents/recreation-and-culture/cultural-resources" target="_blank">Hillsborough County Economic Impact Report</a></p>
+        </section>
+
+        <!-- Shark Attacks -->
+        <section class="chart-section">
+            <h2>Shark Attacks in Tampa Bay (2010-2023)</h2>
+            <div class="chart-container">
+                <div class="bar-chart">
+                    <div class="y-axis-label">Attacks</div>
+                    <div class="bar" style="height: 80px; background-color: #4CAF50;">2</div>
+                    <div class="bar" style="height: 150px; background-color: #FF9800;">5</div>
+                    <div class="bar" style="height: 40px; background-color: #2196F3;">1</div>
+                    <div class="bar" style="height: 100px; background-color: #FFC107;">3</div>
+                    <div class="bar" style="height: 120px; background-color: #4CAF50;">4</div>
+                </div>
+                <div class="x-axis" style="display: flex; justify-content: space-around;">
+                    <span>2010</span>
+                    <span>2011</span>
+                    <span>2012</span>
+                    <span>2013</span>
+                    <span>2014</span>
+                </div>
+            </div>
+            <p class="chart-note"><strong>Note:</strong> This data shows shark attacks reported in the Tampa Bay area from 2010 to 2023.</p>
+            <p class="chart-source"><strong>Source:</strong> <a href="https://www.floridamuseum.ufl.edu/shark-attacks/" target="_blank">Florida Museum of Natural History - Shark Attack File</a></p>
+        </section>
+    </main>
+
+     <footer class="text-center py-3">
+        <p>Created by John Humphrey | Assignment 2 | ISM 6225</p>
+        <div class="footer-links">
+            <a href="aboutus.html">About Us</a> |
+            <a href="crud.html">CRUD Operations</a> |
+            <a href="analytics.html">Data Analytics</a>
+        </div>
+    </footer>
+</body>
+</html>

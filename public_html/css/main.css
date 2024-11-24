@@ -1,0 +1,146 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #444;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+/* Chart-specific styles */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+    padding-left: 50px; /* Adds space for Y-axis label */
+    border-left: 2px solid #ccc; /* Adds a vertical guideline for the Y-axis */
+    overflow: visible; /* Ensure Y-axis remains visible */
+}
+
+.bar {
+    width: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #4CAF50; /* Default bar color */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Y-axis label styling */
+.y-axis-label {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Keep it consistent */
+    transform: translateY(-50%) rotate(-90deg); /* Vertical rotation */
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent breaking */
+}
+
+/* X-axis labels */
+.x-axis {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Chart notes and sources */
+.chart-note {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.chart-source {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer Style */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #dcdcdc; /* Light gray color for better visibility */
+    padding: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Change color to white when hovered */
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .bar-chart {
+        height: 200px; /* Reduce height for smaller screens */
+        padding-left: 30px; /* Adjust padding */
+    }
+    .y-axis-label {
+        left: 5px; /* Adjust Y-axis label position */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+    .bar {
+        width: 40px; /* Narrower bars for smaller screens */
+    }
+}
