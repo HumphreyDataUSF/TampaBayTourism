@@ -6,19 +6,18 @@ This project highlights the best attractions and activities in the Tampa Bay are
 
 The project is structured as follows:
 
-├── aboutus.html       # About Us page
-├── analytics.html     # Data Analytics page
-├── beaches.html       # Beaches and Water Activities page
-├── cultural.html      # Cultural Experiences page
-├── crud.html          # CRUD Operations page (simulated interface)
-├── daytrips.html      # Day Trips Around Tampa Bay page
-├── family.html        # Family-Friendly Adventures page
-├── index.html         # Home page (entry point)
-├── romantic.html      # Romantic Outings page
-├── css/
-│   └── main.css       # Stylesheet for the entire site
-└── img/
-└── [images]           # Empty
+aboutus.html        # About Us page
+analytics.html      # Data Analytics page
+beaches.html        # Beaches and Water Activities page
+cultural.html       # Cultural Experiences page
+crud.html           # CRUD Operations page (simulated interface)
+daytrips.html       # Day Trips Around Tampa Bay page
+family.html         # Family-Friendly Adventures page
+index.html          # Home page (entry point)
+romantic.html       # Romantic Outings page
+css/
+└── main.css        # Stylesheet for the entire site
+img/                # Folder for images (currently empty)
 
 ## Viewing the Website
 
