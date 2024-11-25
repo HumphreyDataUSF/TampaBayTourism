@@ -10,32 +10,35 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+    background-color: #333; /* Consistent dark background */
+    color: white; /* White text */
+    padding: 15px 0; /* Vertical spacing */
+    text-align: center; /* Center-align the header */
+    margin: 0; /* Remove any default margins */
 }
 
 /* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: #444;
+    list-style-type: none; /* Remove bullet points */
+    padding: 10px 0; /* Add vertical spacing */
+    margin: 0; /* Reset margin */
+    background-color: #333; /* Match header background */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center-align items */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px; /* Add spacing between items */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size for readability */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 /* Main content */
@@ -59,40 +62,42 @@ h2 {
     position: relative;
     height: 300px;
     margin-bottom: 20px;
-    padding-left: 50px; /* Adds space for Y-axis label */
-    border-left: 2px solid #ccc; /* Adds a vertical guideline for the Y-axis */
-    overflow: visible; /* Ensure Y-axis remains visible */
+    padding-left: 0; /* Removes padding for the Y-axis line */
+    overflow: visible; /* Ensure all elements remain visible */
 }
 
 .bar {
-    width: 60px;
+    width: 60px; /* Width of each bar */
     text-align: center;
     color: white;
     font-weight: bold;
-    background-color: #4CAF50; /* Default bar color */
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
-/* Y-axis label styling */
 .y-axis-label {
     position: absolute;
     top: 50%;
-    left: 10px; /* Keep it consistent */
-    transform: translateY(-50%) rotate(-90deg); /* Vertical rotation */
+    left: 10px; /* Aligns with the Y-axis label */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate text */
     font-size: 14px;
     font-weight: bold;
-    white-space: nowrap; /* Prevent breaking */
+    white-space: nowrap;
 }
 
 /* X-axis labels */
 .x-axis {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
     display: flex;
     justify-content: space-around;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.x-axis span {
+    width: 60px; /* Matches bar width */
+    text-align: center;
 }
 
 /* Chart notes and sources */
@@ -117,30 +122,35 @@ footer {
 
 .footer-links a {
     text-decoration: none;
-    color: #dcdcdc; /* Light gray color for better visibility */
+    color: #dcdcdc; /* Light gray color */
     padding: 0 10px;
 }
 
 .footer-links a:hover {
-    color: #ffffff; /* Change color to white when hovered */
+    color: #ffffff; /* Change color on hover */
     text-decoration: underline;
-}
-
-.footer-links {
-    margin-top: 10px;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center-align links */
+    }
+    nav ul li {
+        margin: 5px 0; /* Add spacing between stacked items */
+    }
     .bar-chart {
-        height: 200px; /* Reduce height for smaller screens */
-        padding-left: 30px; /* Adjust padding */
+        height: 200px;
     }
     .y-axis-label {
-        left: 5px; /* Adjust Y-axis label position */
-        font-size: 12px; /* Reduce font size for smaller screens */
+        left: 10px;
+        font-size: 12px;
     }
     .bar {
-        width: 40px; /* Narrower bars for smaller screens */
+        width: 40px;
+    }
+    .x-axis span {
+        width: 40px;
     }
 }
